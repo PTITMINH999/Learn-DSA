@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define faster() ios_base::sync_with_stdio(0); cin.tie(NULL); cout.tie(NULL);
+#define run() int t=1; cin>>t; while(t--)
+#define ll long long
+
+int main(){
+    faster();
+    run(){
+        int n;
+        cin >> n;
+        int dem = 0;
+        for (int i = 1; i * i <= n; i++) {
+            if (n % i == 0) {
+                if (i % 2 == 0) dem++;
+                if (i != n / i && (n / i) % 2 == 0) dem++;
+            }
+        }
+        cout << dem << '\n';
+    }
+}
