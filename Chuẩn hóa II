@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define faster() ios_base::sync_with_stdio(0); cin.tie(NULL); cout.tie(NULL);
+#define run() int t; cin>>t;cin.ignore(); while(t--)
+#define ll long long
+string chuan_hoa(string s) {
+    stringstream ss(s);
+    string word, h, name = "";
+    ss >> h;
+    transform(h.begin(), h.end(), h.begin(), ::toupper);
+    
+    while (ss >> word) {
+        transform(word.begin(), word.end(), word.begin(), ::tolower);
+        word[0] = toupper(word[0]);
+        name += word + " ";
+    }
+    name.pop_back();
+    return name + ", " + h;
+}
+
+int main(){
+    faster();
+    run(){
+        string s;
+        getline(cin, s);
+        cout << chuan_hoa(s) << endl;
+
+    }
+}
