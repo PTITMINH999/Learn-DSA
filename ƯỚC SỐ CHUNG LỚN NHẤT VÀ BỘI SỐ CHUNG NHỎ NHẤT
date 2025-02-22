@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define faster() ios_base::sync_with_stdio(0); cin.tie(NULL); cout.tie(NULL);
+#define run() int t; cin>>t; while(t--)
+#define ll long long
+ll gcd(ll a,ll b){
+    while(b != 0){
+      int r = a % b;
+      a = b;
+      b = r;
+   }
+   return a;
+}
+int main(){
+    faster();
+    run(){
+        ll a,b; cin>>a>>b;
+        ll gcd1 = gcd(a,b);
+        cout<<gcd1<<" "<<a*b/gcd1<<" "<<endl;
+    }
+}
