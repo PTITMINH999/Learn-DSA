@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define faster() ios_base::sync_with_stdio(0); cin.tie(NULL); cout.tie(NULL);
+#define run() int t; cin>>t; while(t--)
+#define ll long long
+bool solve(const string &s) {
+    bool tang = true, giam = true;
+    for (int i = 1; i < s.size(); i++) {
+        if (s[i] < s[i - 1]) tang = false;
+        if (s[i] > s[i - 1]) giam = false;
+    }
+    return tang || giam;
+}
+
+int main(){
+    faster();
+    run(){
+        string s;
+        cin >> s;
+        cout << (solve(s) ? "YES" : "NO") << endl;
+
+    }
+}
